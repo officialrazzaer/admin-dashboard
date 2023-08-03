@@ -1,0 +1,245 @@
+body {
+  height: 100vh;
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  overflow-y: auto;
+}
+
+header {
+  background-color: lightblue;
+  padding: 25px;
+  color: #fff;
+}
+
+.svg-icon {
+  width: 2em;
+  height: 2em;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: black;
+}
+
+.svg-icon circle {
+  stroke: black;
+  stroke-width: 1;
+}
+
+.svg-icon:hover {
+  stroke: #4691f6;
+}
+
+/* sidebar icons  */
+.svg-icon-sidebar {
+  width: 2em;
+  height: 2em;
+  padding-left: 10px;
+  padding-bottom: 5px;
+}
+
+.svg-icon-sidebar path,
+.svg-icon-sidebar polygon,
+.svg-icon-sidebar rect {
+  fill: white;
+}
+
+.svg-icon-sidebar circle {
+  stroke: black;
+  stroke-width: 1;
+}
+
+.svg-icon-sidebar:hover {
+  stroke: #4691f6;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+
+h1 {
+  margin: 0; /* Remove default margin for h1 */
+  font-size: 2em;
+}
+
+#logo h1 span {
+  color: red;
+}
+
+#search-bar {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+
+#search-bar input {
+  padding: 5px;
+  width: 30vw; /* Adjust the width as needed */
+  height: 20px;
+  border: 1px solid #ddd; /* Set the input border color */
+  border-radius: 5px; /* Rounded corners for the input */
+  margin-left: 20px; /* Add some spacing between input and search icon */
+}
+
+#search-bar svg {
+  margin-left: 5px; /* Add some spacing between input and search icon */
+}
+
+#profile,
+#notification {
+  margin-left: 20px; /* Add some spacing between search bar and profile/notification */
+}
+
+#logo {
+  margin-right: auto; /* Pushes the logo to the left */
+}
+
+/* main body using a gird system */
+
+.container {
+  display: grid;
+  grid-template-columns: 20vw auto 15vw;
+  grid-gap: 10px;
+  background-color: #f0f0f0;
+  padding: 10px;
+  height: 100vh;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  background-color: lightblue;
+  color: #fff;
+  padding: 20px;
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+.dashboard-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 45%);
+  grid-template-rows: repeat(2, 50%);
+  grid-gap: 15px;
+  background-color: lightblue;
+  padding: 10px;
+  justify-content: center;
+}
+
+.grid-item {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 20px;
+}
+
+.statistics {
+  grid-template-rows: 20% 80%;
+  display: grid;
+  flex-direction: column;
+  background-color: lightblue;
+  color: black;
+  padding: 10px;
+}
+
+.stats-item {
+  background-color: white;
+  text-align: center;
+  padding-top: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.statistics-item {
+  margin-bottom: 5px;
+}
+
+.about-me {
+  background-color: white;
+  text-align: center;
+  flex-direction: column;
+  color: black;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+#about-me-heading {
+  font-size: 25px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+}
+
+.container > div {
+  border-radius: 10px;
+}
+
+.container > div > div {
+  border-radius: 10px;
+}
+
+/* adding a calc to project 1  */
+.calculator {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+
+.calculator-screen {
+  font-size: 24px;
+  text-align: right;
+  padding: 5px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  margin-bottom: 5px;
+}
+
+.calculator-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 50%);
+  grid-gap: 5px;
+}
+
+.calculator-buttons button {
+  font-size: 20px;
+  padding: 10px;
+  background-color: #ddd;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+/* for smaller screens  */
+@media (max-width: 767px) {
+  .container {
+    grid-template-columns: 1fr; /* Single column for smaller screens */
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr; /* Single column for smaller screens */
+    grid-template-rows: repeat(4, 25vh);
+  }
+
+  .statistics {
+    grid-template-rows: 25vh 50vh;
+  }
+  .dashboard {
+    display: none;
+  }
+  .calculator-buttons {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
